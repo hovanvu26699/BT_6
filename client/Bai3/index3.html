@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#Set-text-btn").click(function () {
+                $("#text").text("Please fill in your account!");
+            });
+
+            $('#Set-html-btn').click(function () {
+                $('#text').html('<b>Please fill in your account!</b>')
+            })
+
+            $('#Set-val-btn').click(function () {
+                $('#user').val('Hovanvu')
+                $('#pass').val('123456')
+            })
+
+            $('#Set-attr-btn').click(function () {
+                $("#text").text("Please fill in your account!");
+                $('#text').attr({ "style": "color:red; font-weight: 700" })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="LogIn">
+        <form action="" method="dialog">
+            <p id="topic" style="font-size: 45px; font-weight: 700; color: rgb(214, 98, 3); margin-bottom: 30px;">
+                Login Form
+            </p>
+            <input type="text" id="user" placeholder="Username" name="username"> <br>
+            <input type="password" id="pass" placeholder="Password" name="password"> <br>
+            <button id="Set-text-btn">Set Text</button>
+            <button id="Set-html-btn">Set HTML</button>
+            <button id="Set-val-btn">Set Value</button>
+            <button id="Set-attr-btn">Set Attr</button> <br>
+            <span id="text"></span>
+        </form>
+    </div>
+</body>
+
+</html>
