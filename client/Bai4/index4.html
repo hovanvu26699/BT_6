@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 4</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#append-btn').click(function () {
+                $('#list').append('<li>Append Text</li>')
+            })
+
+            $('#after-btn').click(function () {
+                $('#list').after('<li>After Text</li>')
+            })
+
+            $('#prepend-btn').click(function () {
+                $('#list').prepend('<li>Prepend Text</li>')
+            })
+
+            $('#before-btn').click(function () {
+                $('#list').before('<li>Before Text</li>')
+            })
+        })
+    </script>
+</head>
+<style>
+    #test {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+
+    #back {
+        margin: 10px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div id="test">
+        <div>
+            <ol id="list">
+                <li>Cafe</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+        </div>
+
+        <div id="back">
+            <button id="append-btn" class="btn">Append Text</button>
+            <button id="after-btn" class="btn">After Text</button>
+            <button id="prepend-btn" class="btn">Prepend Text</button>
+            <button id="before-btn" class="btn">Before Text</button>
+        </div>
+    </div>
+</body>
+
+</html>
