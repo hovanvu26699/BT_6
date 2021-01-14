@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#get-text-btn').click(function () {
+                alert($('#topic').text())
+            })
+
+            $('#get-html-btn').click(function () {
+                alert($('#topic').html())
+            })
+
+            $('#get-val-btn').click(function () {
+                alert($('#user').val() + $('#pass').val())
+            })
+
+            $('#get-attr-btn').click(function () {
+                alert($('#topic').attr('style'))
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="LogIn">
+        <form>
+            <p id="topic" style="font-size: 45px; font-weight: 700; color: rgb(214, 98, 3); margin-bottom: 30px;">
+                <i>Login Form</i>
+            </p>
+            <input type="text" id="user" value="Hovanvu" name="username"> <br>
+            <input type="password" id="pass" value="1234567" name="password"> <br>
+            <button id="get-text-btn">Get Text </button>
+            <button id="get-html-btn">Get HTML</button>
+            <button id="get-val-btn">Get Value</button>
+            <button id="get-attr-btn">Get Attr</button>
+        </form>
+    </div>
+</body>
+
+</html>
